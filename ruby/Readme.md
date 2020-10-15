@@ -1,3 +1,11 @@
+---
+page_type: sample
+languages:
+- ruby
+products:
+- azure-sql-database	
+---
+
 # Developing applications with Ruby and Azure SQL 
 
 
