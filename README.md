@@ -13,7 +13,7 @@ products:
 ---
 
 
-# Code Samples for getting started with Azure SQL
+# Code Samples for getting started with Azure SQL  
 
 Code samples for getting started wth development on Azure SQL
 
