@@ -4,6 +4,8 @@ languages:
 - php
 products:
 - azure-sql-database	
+description: "Azure SQL - Getting Started Samples"
+urlFragment: "AzureSqlGettingStartedSamples"
 ---
 
 # Developing applications with PHP and Azure SQL 
