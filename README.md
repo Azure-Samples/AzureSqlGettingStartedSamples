@@ -7,7 +7,7 @@ languages:
 - nodejs
 - php
 - phython
--ruby
+- ruby
 products:
 - azure-sql-database	
 ---
