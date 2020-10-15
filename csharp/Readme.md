@@ -1,3 +1,11 @@
+---
+page_type: sample
+languages:
+- csharp
+products:
+- azure-sql-database	
+---
+
 # Developing applications with C# and Azure SQL 
 
 Pick a platform below to get started:
