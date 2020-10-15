@@ -4,6 +4,8 @@ languages:
 - phython
 products:
 - azure-sql-database	
+description: "Azure SQL - Getting Started Samples"
+urlFragment: "AzureSqlGettingStartedSamples"
 ---
 
 
