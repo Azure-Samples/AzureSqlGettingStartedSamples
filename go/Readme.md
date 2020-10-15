@@ -4,6 +4,8 @@ languages:
 - go
 products:
 - azure-sql-database	
+description: "Azure SQL - Getting Started Samples"
+urlFragment: "AzureSqlGettingStartedSamples"
 ---
 
 # Developing applications with Go and Azure SQL 
