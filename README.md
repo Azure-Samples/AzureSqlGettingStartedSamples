@@ -9,7 +9,7 @@ languages:
 - phython
 - ruby
 products:
-- azure-sql-database	
+- azure-sql-database
 description: "Azure SQL - Getting Started Samples"
 urlFragment: "AzureSqlGettingStartedSamples"
 ---
