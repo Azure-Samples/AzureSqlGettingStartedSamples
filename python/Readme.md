@@ -1,7 +1,7 @@
 ---
 page_type: sample
 languages:
-- phython
+- python
 products:
 - azure-sql-database	
 description: "Azure SQL - Getting Started Samples"
