@@ -9,7 +9,7 @@ description: "A complete tutorial to learn how to take advantage of Azure SQL wi
 
 # Developing applications with Node.Js and Azure SQL 
 
-This repository contains a tutorial that will guide you through the creation of a simple solution using Node.js to take advantage of Azure SQL. Azure SQL as many features for developers and learning how to take advantage of it will help you to create secure, scalable and performant modern applications. To learn more about several of the features that Azure SQL provides to developers, read here: [10 reasons to use Azure SQL in your next project](https://devblogs.microsoft.com/azure-sql/10-reasons-to-use-azure-sql-in-your-next-project/).
+This repository contains a tutorial that will guide you through the creation of a simple solution using [Node.js](https://nodejs.org/en/) to take advantage of Azure SQL. Azure SQL as many features for developers and learning how to take advantage of it will help you to create secure, scalable and performant modern applications. To learn more about several of the features that Azure SQL provides to developers, read here: [10 reasons to use Azure SQL in your next project](https://devblogs.microsoft.com/azure-sql/10-reasons-to-use-azure-sql-in-your-next-project/).
 
 With the proposed tutorial you will learn how to create a database, use the most common packages to connect to it and, finally, you'll see how performance can be improved *a lot* by using Columnstore Indexes.
 
@@ -19,5 +19,7 @@ No matter which is the platform or the OS you are using, you can happily use Azu
 - [macOS](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/macOS)
 - [Red Hat Enterprise Linux](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/RHEL)
 - [Ubuntu](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/Ubuntu)
+
+Once you'll be more expert on Azure SQL and Node.Js, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=nodejs) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
 If you are interested in other languages or platforms, please visit our [Getting Started Tutorials](https://www.microsoft.com/en-us/sql-server/developer-get-started/) page for a many other tutorials.
