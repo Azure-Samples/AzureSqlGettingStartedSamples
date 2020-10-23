@@ -7,9 +7,11 @@ products:
 description: "A complete tutorial to learn how to take advantage of Azure SQL with Node.js"
 ---
 
-# Developing applications with NodeJs and Azure SQL 
+# Developing applications with Node.Js and Azure SQL 
 
-This repository contains a tutorial that will guide you through the creation of a simple solution using Node.js that will take advantage of Azure SQL. You will learn how to create a database, use the most common packages to connect to it and, finally, you'll see how performance can be improved *a lot* by using Columnstore Indexes.
+This repository contains a tutorial that will guide you through the creation of a simple solution using Node.js to take advantage of Azure SQL. Azure SQL as many features for developers and learning how to take advantage of it will help you to create secure, scalable and performant modern applications. To learn more about several of the features that Azure SQL provides to developers, read here: [10 reasons to use Azure SQL in your next project](https://devblogs.microsoft.com/azure-sql/10-reasons-to-use-azure-sql-in-your-next-project/).
+
+With the proposed tutorial you will learn how to create a database, use the most common packages to connect to it and, finally, you'll see how performance can be improved *a lot* by using Columnstore Indexes.
 
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
