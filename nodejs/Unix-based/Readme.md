@@ -1,9 +1,12 @@
 # How to use these tutorials
-First, you need to follow the machine setup instructions for your OS here:
+
+## Prerequisite: Machine Setup
+
+First, set up your machine based on your OS by following the instructions in the links below.  Then, return to this page and follow the remainder of the tutorial
 
 - [**Ubuntu**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/main/nodejs/Unix-based/Ubuntu_Setup.md)
--RHEL
--SLES
+- RHEL
+- SLES
 
 Now that your machine is set up, you can proceed with the next steps.
 
