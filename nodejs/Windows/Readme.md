@@ -284,7 +284,7 @@ Run your Node.js app from the terminal, and record the result.
 sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -Q "CREATE CLUSTERED COLUMNSTORE INDEX Columnstoreindex ON Table_with_3M_rows;"
 ```
 
-## Step 3.5 Re-run the columnstore.js script and notice how long the query took to complete this time.
+## Re-run the columnstore.js script and notice how long the query took to complete this time.
 
 
 ```terminal
