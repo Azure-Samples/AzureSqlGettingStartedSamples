@@ -161,6 +161,27 @@ Run the crud.js app to see the results
 
 ## Secure your credentials using Azure Key Vault
 
+**Create your Key vault and store your credentials**
+
+First, you need to create an Azure Key Vault.  
+It is recommended that you create a Key Vault in the same resource group as your database and server.
+
+1. From the Azure Portal, select "+ Create a Resource".  Search for "Key Vault" and select that.
+1. In the "Create key vault" page, fill out the resource group and key vault name.
+1. Select "Review and Create", then "Create".
+
+For future reference, there are more details [**here**](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-key-vault-manage-portal?view=azs-2002).
+
+Now that you have created the Key Vault, you need to add a secret called **AppSecret** to your vault.
+
+1. From the Azure Portal dashboard, select All resources, select the key vault that you created earlier, and then select the Keys tile.
+1. In the Keys pane, select Generate/Import.
+1. Name your key AppSecret, then make the secret your password.
+1. You can leave the values for Content Type, activation date, expiration date, and Enabled (Yes) as the defaults.
+1. Select Create to start the deployment.
+
+**Update machine settings and program to use KeyVault for authentication**
+
 This section takes you through the steps described [**on this site**](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-node) to set up your machine for authentication to the key vault.  You need to do this to use the **DefaultAzureCredentialBuilder()**.
 
 1. Open a command window and execute **az login** if you have not already.
@@ -170,7 +191,7 @@ This section takes you through the steps described [**on this site**](https://do
 az ad sp create-for-rbac -n "http://mySP" --sdk-auth
 ```
 
-1. Give the serpvice prinicpal access to your key vault.
+1. Give the service prinicpal access to your key vault.
 
 ```terminal
 az keyvault set-policy -n <your-unique-keyvault-name> --spn <clientId-of-your-service-principal> --secret-permissions delete get list set --key-permissions create decrypt delete encrypt get list unwrapKey wrapKey
