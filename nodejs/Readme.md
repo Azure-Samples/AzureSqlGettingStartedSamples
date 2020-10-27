@@ -16,9 +16,8 @@ With the proposed tutorial you will learn how to create a database, use the most
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
 - [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/edit/main/nodejs/Windows/)
-- [macOS](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/macOS)
-- [Red Hat Enterprise Linux](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/RHEL)
-- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/edit/main/nodejs/Windows/)
+- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/main/nodejs/Unix-based/Readme.md)
+- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/main/nodejs/Unix-based/)
 
 # Prerequisites
 
