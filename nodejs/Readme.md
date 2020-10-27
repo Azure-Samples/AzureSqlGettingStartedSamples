@@ -15,11 +15,18 @@ With the proposed tutorial you will learn how to create a database, use the most
 
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
-- [Windows](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/Windows)
-- [macOS](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/macOS)
-- [Red Hat Enterprise Linux](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/RHEL)
-- [Ubuntu](https://github.com/microsoft/sql-server-samples/tree/master/samples/tutorials/node.js/Ubuntu)
+- [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/main/nodejs/Windows/)
+- [Red Hat Enterprise Linux](TODO)
+- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/main/nodejs/Unix-based/)
 
 Once you'll be more expert on Azure SQL and Node.Js, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=nodejs) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
-If you are interested in other languages or platforms, please visit our [Getting Started Tutorials](https://www.microsoft.com/en-us/sql-server/developer-get-started/) page for a many other tutorials.
+# Prerequisites
+
+All of the above examples require an Azure SQL DB  Please follow these instructions to create one.
+
+Go to this [**site**](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal) for instructions on how to set up an Azure Hosted SQL Database.
+
+1.  Perform the Prerequisites steps.
+
+2. Follow steps 1-17 from the section: **Create a Single Database**.
