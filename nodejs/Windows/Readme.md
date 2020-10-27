@@ -1,4 +1,4 @@
-This page will walk you through everything you need to setup and run the above Node.js samples on your Windows machine.
+This page will walk you through everything you need to setup and run the Node.js samples on your Windows machine.
 
 # Machine Setup
 
