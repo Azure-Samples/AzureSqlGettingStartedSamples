@@ -1,6 +1,8 @@
+
+# Machine Setup for Ubuntu
+
 This page will walk you through everything you need to setup and run the Node.js samples on your Ubuntu machine.
 
-# Machine Setup
 ## Install Node.js
 
 Install Node.js by first adding the necessary node repositories, and then installing the nodejs package.
