@@ -5,7 +5,7 @@
 First, set up your machine based on your OS by following the instructions in the links below.  Then, return to this page and follow the remainder of the tutorial
 
 - [**Ubuntu**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Ubuntu_Setup.md)
-- [**RHEL**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/REHL_Setup.md)
+- [**RHEL**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/RHEL_Setup.md)
 - [**SLES**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/SLES_Setup.md)
 - [**MacOs**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Mac_Setup.md)
 
