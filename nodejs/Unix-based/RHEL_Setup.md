@@ -66,3 +66,5 @@ sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your
 
 
 > You have successfully installed SQL Server Command Line Utilities on your Red Hat machine! 
+
+# Proceed with the tutorial by following the remaining directions [**here**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Readme.md)
