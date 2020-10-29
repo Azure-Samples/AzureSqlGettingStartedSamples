@@ -84,3 +84,5 @@ az login
 At this time, you have authenticated yourself and your machine to Azure, so your application can connect.
 
 > You have now authenticated your machine to Azure.  
+
+# Proceed with the tutorial by following the remaining directions [**here**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Readme.md)
