@@ -60,9 +60,10 @@ At this time, you have authenticated yourself and your machine to Azure, so your
 
 ## Get Connection Information to use in Connection Strings, and Create a Firewall Rule.
 
-1. Get the connection string info from the Azure Portal
 
-Go to your database and look in the panel on the left.  It should say Overview, activity log, …
+### Get the connection string info from the Azure Portal
+
+1. Using the Azure Portal, go to your database and look in the panel on the left.  It should say Overview, activity log, …
 
 Under the settings subcategory, find "connection strings"
 
@@ -84,7 +85,7 @@ UserId=your_user
 Password=your_password
 ```
 
-**Create a firewall rule**
+### Create a firewall rule
 
 In order to connect to your Azure SQL database, you will need to create a filrewall rule on the target server.  This allows your application to talk to your Azure SQL Database.
 
