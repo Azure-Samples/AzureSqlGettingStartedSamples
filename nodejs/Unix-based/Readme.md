@@ -116,7 +116,7 @@ Using your favorite text editor, create a new file called [**crud.js**](https://
 
 ## Secure your credentials using Azure Key vault
 
-**Create an Azure Key Vault and put your Secret into it.**
+### Create an Azure Key Vault and put your Secret into it.
 
 First, you need to create an Azure Key Vault.  
 It is recommended that you create a Key Vault in the same resource group as your database and server.
@@ -135,14 +135,14 @@ Now that you have created the Key Vault, you need to add a secret called **AppSe
 1. You can leave the values for Content Type, activation date, expiration date, and Enabled (Yes) as the defaults.
 1. Select Create to start the deployment.
 
-**Add required dependencies to allow the program to connect.**
+### Add required dependencies to allow the program to connect.
 
 ```terminal
   npm install @azure/keyvault-secrets
   npm install @azure/identity
 ```
 
-**Set up your environment to Authenticate to Azure Key Vault**
+### Set up your environment to Authenticate to Azure Key Vault
 
 This section takes you through the steps described [**on this site**](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-node) to set up your machine for authentication to the key vault.  You need to do this to use the **DefaultAzureCredentialBuilder()**.
 
