@@ -22,7 +22,7 @@ node -v
 
 ## Install the ODBC Driver and SQL Command Line Utility for SQL Server
 
-[SQLCMD](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15#ubuntu){:target="_blank"} is a command line tool that enables you to connect to Azure SQL and run queries.
+[**SQLCMD**](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15#ubuntu) is a command line tool that enables you to connect to Azure SQL and run queries.
 
 ```terminal
 
