@@ -16,8 +16,10 @@ With the proposed tutorial you will learn how to create a database, use the most
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
 - [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Windows)
-- [Red Hat Enterprise Linux](TODO)
-- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Unix-based)
+- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Unix-based/Ubuntu_Setup.md)
+- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Unix-based/Ubuntu_Setup.md)
+- [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Unix-based/SLES_Setup.md)
+- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/Unix-based/Mac_Setup.md)
 
 Once you'll be more expert on Azure SQL and Node.Js, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=nodejs) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
