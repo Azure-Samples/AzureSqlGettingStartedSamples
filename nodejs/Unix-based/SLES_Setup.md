@@ -1,6 +1,6 @@
-# Machine Setup for Ubuntu
+# Machine Setup for SLES
 
-This page will walk you through everything you need to setup and run the Node.js samples on your Ubuntu machine.
+This page will walk you through everything you need to setup and run the Node.js samples on your SLES machine.
 
 ## Install Node.js
 
@@ -72,3 +72,4 @@ sqlcmd -S your_database.database.windows.net -U your_user -P your_password -d yo
 
 > You have successfully installed SQL Server Command Line Utilities on your SLES machine! 
 
+# Proceed with the tutorial by following the remaining directions [**here**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Readme.md)
