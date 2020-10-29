@@ -2,9 +2,9 @@
 
 This page will walk you through everything you need to setup and run the Node.js samples on your Mac machine.
 
-## Install [Homebrew](https://brew.sh/) by following the instructions on the site.
+## Install [Homebrew](https://brew.sh/) by following the instructions on the site
 
-## Restart the terminal session.
+# Restart the terminal session.
 
 ## Install Node.js
 
@@ -38,3 +38,5 @@ sqlcmd -S your_database.database.windows.net -U your_user -P your_password -d yo
 ```
 
 > You have successfully installed SQL Server Command Line Utilities on your macOS machine!
+
+# Proceed with the tutorial by following the remaining directions [**here**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/Readme.md)
