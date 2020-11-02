@@ -20,7 +20,7 @@ No matter which is the platform or the OS you are using, you can happily use Azu
 - [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/RHEL.md)
 - [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/Ubuntu.md)
 - [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/SLES.md)
-- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/Ubuntu.md)
+- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/Mac.md)
 
 Once are more expert on Azure SQL and PHP, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=php) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
