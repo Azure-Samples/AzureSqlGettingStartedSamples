@@ -60,7 +60,6 @@ At this time, you have authenticated yourself and your machine to Azure, so your
 > In this section you will create two simple Java apps. One of them will perform basic Insert, Update, Delete, and Select, while the second one will make use of [Hibernate](http://hibernate.org/orm/), one of the most popular Java Object-relational mappers, to execute the same operations.
 
 ## Get Connection Information to use in Connection Strings, and Create a Firewall Rule.
-## Get Connection Information to use in Connection Strings, and Create a Firewall Rule.
 
 1. Using the Azure Portal, go to your database and look in the panel on the left.  It should say Overview, activity log, …
 
