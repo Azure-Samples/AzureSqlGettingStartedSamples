@@ -2,7 +2,13 @@
 
 This page will walk you through everything you need to setup and run the Node.js samples on your Mac machine.
 
-## Install [Homebrew](https://brew.sh/) by following the instructions on the site
+## Install [Homebrew](https://brew.sh/) 
+
+
+```terminal
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 
 # Restart the terminal session.
 
