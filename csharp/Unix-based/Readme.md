@@ -251,7 +251,7 @@ Fortunately for us, supported features include innovations that can significantl
 
 ## Create a C# Console Application to explore Columnstore performance enhancements
 
-o showcase the capabilities of Columnstore indexes, let's create a C# application that creates a sample database and a sample table with 5 million rows and then runs a simple query before and after adding a Columnstore index.
+To showcase the capabilities of Columnstore indexes, let's create a C# application that creates a sample database and a sample table with 3 million rows and then runs a simple query before and after adding a Columnstore index.
 
 Change to your home directory. Create a new .NET Core project. This will create the project directory with a basic .NET Core Program.cs and csproj file.
 
