@@ -13,7 +13,7 @@ Now that your machine is set up, you can proceed with the next steps.
 
 # Create and Run your first Node.js apps
 
-> In this section you will create three simple Node.js apps. One of them will just connect to the database, the second will perform basic Insert, Update, Delete, and Select, and the third one will make use of Sequelize, one of the most popular Node.js Object-relational mappers, to execute the same operations.
+> In this section you will create two simple Node.js apps. One of them will perform basic Insert, Update, Delete, and Select, and the other one will make use of Sequelize, one of the most popular Node.js Object-relational mappers, to execute the same operations.
 
 ## Get Connection Information to use in Connection Strings, and Create a Firewall Rule.
 
