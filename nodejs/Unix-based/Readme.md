@@ -114,7 +114,7 @@ Using your favorite text editor, create a new file called [**crud.js**](https://
   node crud.js
 ```
 
-## Secure your credentials using Azure Key vault
+# Secure your credentials using Azure Key vault
 
 ### Create an Azure Key Vault and put your Secret into it.
 
@@ -171,7 +171,7 @@ export AZURE_TENANT_ID=your_tenant_id
 export KEY_VAULT_NAME=your_keyvault_name
 ```
 
-**Update your program to use the Key Vault for Authentication**
+## Update your program to use the Key Vault for Authentication
 
 Copy-paste the following into your [**crud_KeyVault.js**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/nodejs/Unix-based/AzureSqlSample/crud_KeyVault.js), and update the keyvault name, and other connection information.
 
