@@ -17,12 +17,12 @@ With the proposed tutorial you will learn how to create a database, use the most
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
 - [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/php/Windows)
-- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/php/Unix-based/Ubuntu_Setup.md)
-- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/php/Ubuntu_Setup.md)
-- [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/php/SLES_Setup.md)
-- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/nodejs/php/Mac_Setup.md)
+- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/RHEL.md)
+- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/Ubuntu.md)
+- [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/SLES.md)
+- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/php/Unix-based/Ubuntu.md)
 
-Once you'll be more expert on Azure SQL and PHP, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=php) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
+Once are more expert on Azure SQL and PHP, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=php) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
 # Prerequisites
 
