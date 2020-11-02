@@ -16,7 +16,7 @@ With the proposed tutorial you will learn how to create a database, use the most
 No matter which is the platform or the OS you are using, you can happily use Azure SQL. As you can see the tutorial is available to be used with:
 
 - [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Windows)
-- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Unix-based/Ubuntu_Setup.md)
+- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Unix-based/RHEL_Setup.md)
 - [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Unix-based/Ubuntu_Setup.md)
 - [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Unix-based/SLES_Setup.md)
 - [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/csharp/Unix-based/Mac_Setup.md)
