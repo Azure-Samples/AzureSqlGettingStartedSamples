@@ -2,7 +2,7 @@
 
 In this part of the tutorial, you will install the necessary dependencies to run Python and connect to Azure SQL.
 
-## Step 1.2 Install Python and other required packages
+## Install Python and other required packages
 
 ```terminal
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
