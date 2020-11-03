@@ -13,8 +13,6 @@ sudo yum group install "Development tools"
 
 > You now have Python installed! The next section will walk you through getting the tools to interact with your database.
 
-## Install the ODBC Driver and SQL Command Line Utility for SQL Server
-
 ## Install the ODBC Driver and SQL Command Line Utility for Azure SQL DB
 
 [SQLCMD](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd) is a command line tool that enables you to connect to Azure SQL DB and run queries.
