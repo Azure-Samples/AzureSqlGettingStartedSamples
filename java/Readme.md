@@ -21,7 +21,7 @@ No matter which is the platform or the OS you are using, you can happily use Azu
 - [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/java/Unix-based/SLES_Setup.md)
 - [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/java/Unix-based/Mac_Setup.md)
 
-Once you'll be more expert on Azure SQL and Java, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=nodejs) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
+Once you'll be more expert on Azure SQL and Java, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=java) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
 
 # Prerequisites
 
