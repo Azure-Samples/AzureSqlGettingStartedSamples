@@ -1,8 +1,8 @@
 using System;
 using System.Data.SqlClient;
-using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.KeyVault.Models;
-using Microsoft.Azure.Services.AppAuthentication;
+using Azure;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,10 +104,10 @@ namespace AzureSqlEFSample
             Console.WriteLine("Trying to get Password from Key Vault.  Press a key to continue...");
             Console.ReadKey(true);
             /* The next four lines of code show you how to use AppAuthentication library to fetch secrets from your key vault */
-            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
-            KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-            SecretBundle secret = await keyVaultClient.GetSecretAsync("https://your_keyvault_name.vault.azure.net/secrets/AppSecret"); // update me
-            return secret.Value;
+            string uri = Environment.GetEnvironmentVariable("KEY_VAULT_URI");
+            SecretClient client = new SecretClient(new Uri(uri), new DefaultAzureCredential());
+            Response<KeyVaultSecret> secret = await client.GetSecretAsync("AppSecret");
+            return secret.Value.ToString();
         }
     }
 }
