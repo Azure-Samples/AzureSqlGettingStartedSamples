@@ -103,8 +103,8 @@ namespace AzureSqlEFSample
             /* The next four lines of code show you how to use AppAuthentication library to fetch secrets from your key vault */
             string uri = Environment.GetEnvironmentVariable("KEY_VAULT_URI");
             SecretClient client = new SecretClient(new Uri(uri), new DefaultAzureCredential());
-            Response<KeyVaultSecret> secret = await client.GetSecretAsync("AppSecret");
-            return secret.Value.ToString();
+            KeyVaultSecret secret = await client.GetSecretAsync("AppSecret");
+            return secret.Value;
         }
     }
 }
