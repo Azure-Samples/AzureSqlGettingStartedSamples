@@ -27,7 +27,8 @@ Preferred method of authenticating to SQL using the DefaultAzureCredential
 - [Authentication](https://docs.microsoft.com/en-us/sql/connect/ado-net/sql/azure-active-directory-authentication?view=sql-server-ver15#using-active-directory-default-authentication)
 
 
-Once you'll be more expert on Azure SQL and C#, you can also take advtange of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=csharp) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
+Once you'll be more expert on Azure SQL and C#, you can also take advantage of [several samples](https://docs.microsoft.com/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=csharp) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
+
 # Prerequisites
 
 All of the above examples require an Azure SQL DB Please follow these instructions to create one.
