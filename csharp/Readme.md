@@ -9,7 +9,8 @@ description: "Azure SQL - Getting Started Samples"
 
 # Developing applications with C# and Azure SQL
 
-This repository will guide you through the creation of a simple solution using [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) to take advantage of Azure SQL. Azure SQL as many features for developers and learning how to take advantage of it will help you to create secure, scalable and performant modern applications. To learn more about several of the features that Azure SQL provides to developers, read here: [10 reasons to use Azure SQL in your next project](https://devblogs.microsoft.com/azure-sql/10-reasons-to-use-azure-sql-in-your-next-project/).
+This repository will guide you through the creation of a simple solution using [C#](https://docs.microsoft.com/dotnet/csharp/) to take advantage of Azure SQL. Azure SQL has many features for developers and learning how to take advantage of it will help you to create secure, scalable and performant modern applications. To learn more about the features that Azure SQL provides to developers, read: [10 reasons to use Azure SQL in your next project](https://devblogs.microsoft.com/azure-sql/10-reasons-to-use-azure-sql-in-your-next-project/).
+
 
 No matter which the platform or OS you are using, you can use Azure SQL:
 
