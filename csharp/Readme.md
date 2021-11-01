@@ -30,7 +30,8 @@ Once you'll be more expert on Azure SQL and C#, you can also take advtange of [s
 
 All of the above examples require an Azure SQL DB Please follow these instructions to create one.
 
-Go to this [**site**](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal) for instructions on how to set up an Azure Hosted SQL Database.
+Go to this [**site**](https://docs.microsoft.com/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal) for instructions on how to set up an Azure Hosted SQL Database.
+
 
 1. Perform the Prerequisites steps.
 
