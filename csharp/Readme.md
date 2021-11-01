@@ -24,7 +24,8 @@ No matter which the platform or OS you are using, you can use Azure SQL:
 # Documentation
 
 Preferred method of authenticating to SQL using the DefaultAzureCredential
-- [Authentication](https://docs.microsoft.com/en-us/sql/connect/ado-net/sql/azure-active-directory-authentication?view=sql-server-ver15#using-active-directory-default-authentication)
+- [Authentication](https://docs.microsoft.com/sql/connect/ado-net/sql/azure-active-directory-authentication?view=sql-server-ver15#using-active-directory-default-authentication)
+
 
 
 Once you'll be more expert on Azure SQL and C#, you can also take advantage of [several samples](https://docs.microsoft.com/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=csharp) that will help you to create Full-Stack solutions or Back-End API, that can be used in project of any size and scale.
