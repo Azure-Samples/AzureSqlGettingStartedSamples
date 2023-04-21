@@ -25,7 +25,7 @@ Once you'll be more expert on Azure SQL and Go, you can also take advtange of [s
 
 # Prerequisites
 
-## Create an Auzre SQL DB
+## Create an Azure SQL DB
 All of the above examples require an Azure SQL DB  Please follow these instructions to create one.
 
 Go to this [**site**](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal) for instructions on how to set up an Azure Hosted SQL Database.
