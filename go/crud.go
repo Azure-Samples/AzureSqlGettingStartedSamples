@@ -1,12 +1,13 @@
 package main
 
 import ( 
-    _ "github.com/denisenkom/go-mssqldb"
     "database/sql"
     "context"
     "log"
     "fmt"
     "errors"
+
+    _ "github.com/microsoft/go-mssqldb"
 )
 
 var db *sql.DB
