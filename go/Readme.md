@@ -13,11 +13,11 @@ In this tutorial you will learn how to create a database, use [GO](https://golan
 
 Regardless of platform or operating system, you can use Azure SQL. As you can see the tutorial is available to be used with:
 
-- [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Windows_Setup.md)
-- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/RHEL_Setup.md)
-- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Ubuntu_Setup.md)
-- [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/SLES_Setup.md)
-- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Mac_Setup.md)
+- [Windows](../go/Windows_Setup.md)
+- [Red Hat Enterprise Linux](../go/RHEL_Setup.md)
+- [Ubuntu](./go/Ubuntu_Setup.md)
+- [SLES](../go/SLES_Setup.md)
+- [Mac](../go/Mac_Setup.md)
 
 Once you've gotten familiar with Azure SQL and Go, you can take advantage of [several samples](https://docs.microsoft.com/en-us/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=nodejs). The samples will help you to create Full-Stack solutions or Back-End APIs that can be used in projects of any size and scale.
 
@@ -36,11 +36,11 @@ Go to this [**site**](https://docs.microsoft.com/en-us/azure/sql-database/sql-da
 
 Set up your machine using the instructions for your OS by clicking on the links below, then return here to complete the tutorial.
 
-- [Windows](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Windows_Setup.md)
-- [Red Hat Enterprise Linux](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/RHEL_Setup.md)
-- [Ubuntu](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Ubuntu_Setup.md)
-- [SLES](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/SLES_Setup.md)
-- [Mac](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/tree/master/go/Mac_Setup.md)
+- [Windows](../go/Windows_Setup.md)
+- [Red Hat Enterprise Linux](../go/RHEL_Setup.md)
+- [Ubuntu](../go/Ubuntu_Setup.md)
+- [SLES](../go/SLES_Setup.md)
+- [Mac](../go/Mac_Setup.md)
 
 
 # Get Started with Go and Azure SQL
@@ -84,15 +84,15 @@ In order to connect to your Azure SQL database, you will need to create a filrew
 Create a new project directory and install Go dependencies.
 
 ```terminal
-    cd ~/
+cd ~/
 
-    #Create Project Directory
-    mkdir AzureSqlSample
-    cd AzureSqlSample
+#Create Project Directory
+mkdir AzureSqlSample
+cd AzureSqlSample
 
-    # Get and install the Azure SQL DB driver for Go
-    go mod init azure-demo
-    go get github.com/microsoft/go-mssqldb
+# Get and install the Azure SQL DB driver for Go
+go mod init azure-demo
+go get github.com/microsoft/go-mssqldb
 ```
 
 Next we will create a simple Go app that connects to Azure SQL DB.
@@ -148,17 +148,17 @@ go run crud.go
 Create the app directory and initialize Go dependencies.
 
 ```terminal
-    cd ~/
-    mkdir AzureSqlGormSample
-    cd AzureSqlGormSample
+cd ~/
+mkdir AzureSqlGormSample
+cd AzureSqlGormSample
 
-    go mod init AzureSqlGormSample
+go mod init AzureSqlGormSample
 
-    # Get and install the SQL Server driver for Go
-    go get github.com/microsoft/go-mssqldb
+# Get and install the SQL Server driver for Go
+go get github.com/microsoft/go-mssqldb
 
-   # Get and install GORM
-   go get gorm.io/driver/sqlserver
+# Get and install GORM
+go get gorm.io/driver/sqlserver
 ```
 
 Paste the contents below into a file called [**orm.go**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/go/orm.go). Make sure to replace the connection information.
@@ -167,9 +167,8 @@ Paste the contents below into a file called [**orm.go**](https://github.com/Azur
 Run the orm.go app
 
 ```terminal
-    go run orm.go
+go run orm.go
 ```
-
 
 > Congratulations! You've created your first three Go apps with Azure SQL Database! Check out the next section to learn about how you can make your apps faster with the SQL Columnstore feature.
 
@@ -179,7 +178,8 @@ Run the orm.go app
 > Now that you have explored the basics, you are ready to see how you can make your app better with Azure SQL. In this module we will show you a simple example of [Columnstore Indexes](https://docs.microsoft.com/en-us/sql/relational-databases/indexes/columnstore-indexes-overview) and how they can improve data processing speeds. Columnstore Indexes can achieve up to 100x better performance on analytical workloads and up to 10x better data compression than traditional rowstore indexes.
 
 
-Note! May features available in SQL Server are also availble in Azure SQL DB.  Please reference **[this link](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features)** for a full breakdown of which features are available in Azure SQL Database.
+Most features available in SQL Server are also availble in Azure SQL Database.  Please reference **[this link](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-features)** for a full breakdown of which features are available in Azure SQL Database.
+
 Fortunately for us, supported features include innovations that can significantly improve your application’s throughput, latency, and security. Enjoy!
 
 ## Create a Console Application to explore Columnstore performance enhancements
@@ -212,7 +212,7 @@ FROM a, a AS b, a AS c, a AS d, a AS e, a AS f, a AS g, a AS h;
 Connect to the database using sqlcmd and run the SQL script to create the table with 3 million rows. This may take a few minutes to run.
 
 ```terminal
-  sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -i ./CreateSampleTable.sql
+sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -i ./CreateSampleTable.sql
 ```
 
 ## Create a Go app that queries this tables and measures the time taken
@@ -220,19 +220,19 @@ Connect to the database using sqlcmd and run the SQL script to create the table 
 In your project folder, initialize Go dependencies.
 
 ```terminal
-    go mod init AzureSqlColumnstoreSample
+go mod init AzureSqlColumnstoreSample
 
-    go get github.com/microsoft/go-mssqldb
+go get github.com/microsoft/go-mssqldb
 ```
 
-Using you favorite text editor, create a file called [**columnstore.go**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/go/columnstore.go) in your folder.
+Using you favorite text editor, create a file called [**columnstore.go**](https://github.com/Azure-Samples/AzureSqlGettingStartedSamples/blob/master/go) in your folder.
 
 ## Measure how long it takes to run the query
 
 Run your Go app from the terminal.
 
 ```terminal
-  go run columnstore.go
+go run columnstore.go
 ```
 
 ## Add a columnstore index to your table using SQLCMD.
@@ -246,6 +246,6 @@ sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your
 ## Re-run the columnstore.go script and notice how long the query took to complete this time.
 
 ```terminal
-  go run columnstore.go
+go run columnstore.go
 ```
 > Congratulations! You just made your Go app faster using Columnstore Indexes!
