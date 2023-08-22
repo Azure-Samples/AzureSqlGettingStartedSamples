@@ -12,7 +12,7 @@ winget install GoLang.Go
 
 ## Install the SQL Command Line Utility for SQL Server
 
-SQLCMD is a command line tool that enables you to connect to Azure SQL or SQL Server and run queries. Run the following command to instal SQLCMD:
+SQLCMD is a command line tool that enables you to connect to Azure SQL or SQL Server and run queries. Run the following command to install SQLCMD:
 
 ```terminal
 winget install sqlcmd 
