@@ -4,16 +4,19 @@ In this part of the tutorial, you will install the necessary dependencies to run
 
 ## Install GoLang
 
-If you already have Go installed on your machine, skip this step. To install GoLang, download the msi file for Windows at the [Go Downloads page](https://golang.org/dl/).
+If you already have Go installed on your machine, skip this step. If not, run the following command:
 
-You may also have to [install git](https://git-scm.com/downloads) on your machine, to make future calls to "go get" work.
+```terminal
+winget install GoLang.Go 
+```
 
-## Install the ODBC Driver and SQL Command Line Utility for SQL Server
+## Install the SQL Command Line Utility for SQL Server
 
-SQLCMD is a command line tool that enables you to connect to Azure SQL or SQL Server and run queries.
+SQLCMD is a command line tool that enables you to connect to Azure SQL or SQL Server and run queries. Run the following command to instal SQLCMD:
 
-1. Install the [**ODBC Driver**](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server).
-2. Install the [**SQL Server Command Line Utilities**](https://docs.microsoft.com/sql/tools/sqlcmd-utility).
+```terminal
+winget install sqlcmd 
+```
 
 After installing SQLCMD, you can connect to Azure SQL using the following command from a CMD session, making sure to update your connection information:
 
