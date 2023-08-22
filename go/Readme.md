@@ -248,4 +248,4 @@ sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your
 ```terminal
 go run columnstore.go
 ```
-> Congratulations! You just made your Go app faster using Columnstore Indexes!
+Congratulations! You just made your Go app faster using Columnstore Indexes!
