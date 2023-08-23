@@ -12,7 +12,7 @@ winget install GoLang.Go
 If you want to make sure you have the latest version of Go installed on your machine, run the following command:
 
 ```terminal
-winget update golang.go
+winget update GoLang.Go
 ```
 
 ## Install the SQL Command Line Utility for SQL Server
