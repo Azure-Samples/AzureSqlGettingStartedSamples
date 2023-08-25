@@ -13,11 +13,11 @@ In this tutorial you will learn how to create a database, use [Go](https://golan
 
 Regardless of platform or operating system, you can use Azure SQL. As you can see the tutorial is available to be used with:
 
-- [Windows](Windows_Setup)
-- [Red Hat Enterprise Linux](RHEL_Setup)
-- [Ubuntu](Ubuntu_Setup)
-- [SLES](SLES_Setup)
-- [Mac](Mac_Setup)
+- [Windows](Windows_Setup.md)
+- [Red Hat Enterprise Linux](RHEL_Setup.md)
+- [Ubuntu](Ubuntu_Setup.md)
+- [SLES](SLES_Setup.md)
+- [Mac](Mac_Setup.md)
 
 Once you've gotten familiar with Azure SQL and Go, you can take advantage of [several samples](https://learn.microsoft.com/samples/browse/?expanded=dotnet&products=azure-sql-database&languages=go). The samples will help you to create Full-Stack solutions or Back-End APIs that can be used in projects of any size and scale.
 
@@ -33,11 +33,11 @@ For instructions on how to set up an Azure SQL database, see [Azure SQL Database
 
 Set up your machine using the instructions for your OS by clicking on the links below, then return here to complete the tutorial.
 
-- [Windows](Windows_Setup)
-- [Red Hat Enterprise Linux](RHEL_Setup)
-- [Ubuntu](Ubuntu_Setup)
-- [SLES](SLES_Setup)
-- [Mac](Mac_Setup)
+- [Windows](Windows_Setup.md)
+- [Red Hat Enterprise Linux](RHEL_Setup.md)
+- [Ubuntu](Ubuntu_Setup.md)
+- [SLES](SLES_Setup.md)
+- [Mac](Mac_Setup.md)
 
 ## Get Started with Go and Azure SQL
 
