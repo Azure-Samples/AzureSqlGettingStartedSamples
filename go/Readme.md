@@ -56,8 +56,6 @@ Set up your machine using the instructions for your OS by clicking on the links 
    ```results
    Server=your_server.database.windows.net
    Database=your_database
-   UserId=your_user
-   Password=your_password
    ```
 
 #### Create a firewall rule
@@ -75,7 +73,7 @@ Create a new folder for your project called **AzureSqlSample** and switch to tha
 
 Next we will create a Go app that connects to Azure SQL database.
 
-Create a file named [**connect.go**](connect.go) in the AzureSqlSample folder. This sample uses the GoLang Context methods to ensure that there's an active connection to the database server. Don't forget to update the username and password with your own.
+Create a copy of the file [**connect.go**](connect.go) in the AzureSqlSample folder. This sample uses the GoLang Context methods to ensure that there's an active connection to the database server. Make sure to update the connection information.
 
 Prepare and run your Go app from the **AzureSqlSample** folder in the terminal.
 
@@ -83,10 +81,11 @@ Prepare and run your Go app from the **AzureSqlSample** folder in the terminal.
 go mod init azure-demo
 go mod tidy
 
+az login
 go run connect.go
 ```
 
-Create a file called CreateTestData.sql in the **AzureSqlSample** folder. Copy and paste the following the T-SQL code inside it. This will create a schema, table, and insert some sample rows.
+Create a file called **CreateTestData.sql** in the **AzureSqlSample** folder. Copy and paste the following the T-SQL code into it. This will create a schema, table, and insert some sample rows.
 
 ```sql
 CREATE SCHEMA TestSchema;
@@ -112,14 +111,19 @@ GO
 From the **AzureSqlSample** folder, connect to the database using **sqlcmd** and run the SQL script to create the schema, table, and insert some rows.
 
 ```terminal
-sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -i ./CreateTestData.sql
+az login
+sqlcmd -S your_server.database.windows.net -G -d your_database -i ./CreateTestData.sql
 ```
 
-Create a new file called [**crud.go**](crud.go) in the AzureSqlSample folder. Update your connection information. This will insert, update, delete, and read a few rows.
+Create a copy of [**crud.go**](crud.go) in the **AzureSqlSample** folder. Update your connection information. This will insert, update, delete, and read a few rows.
 
-Prepare and run the 'crud.go' app from the **AzureSqlSample folder in the terminal.
+Prepare and run the 'crud.go' app from the **AzureSqlSample** folder in the terminal.
 
 ```terminal
+go mod init AzureSqlSample
+go mod tidy
+
+az login
 go run crud.go
 ```
 
@@ -127,7 +131,7 @@ go run crud.go
 
 Create a new folder for your project called **AzureSqlGormSample** and switch to that folder from the command line.
 
-Paste the contents below into a file called [**orm.go**](orm.go). Make sure to replace the connection information.
+Paste the contents of this file: [**orm.go**](orm.go) into a new file in your folder. Name the file **orm.go**. Make sure to replace the connection information.
 
 Prepare and run the 'orm.go' app from the **AzureSQLGormSample** in the terminal.
 
@@ -135,6 +139,7 @@ Prepare and run the 'orm.go' app from the **AzureSQLGormSample** in the terminal
 go mod init AzureSqlGormSample
 go mod tidy
 
+az login
 go run orm.go
 ```
 
@@ -167,15 +172,18 @@ INTO Table_with_3M_rows
 FROM a, a AS b, a AS c, a AS d, a AS e, a AS f, a AS g, a AS h;
 ```
 
-From the **AzureSqlColumnstoreSample' folder, connect to the database using sqlcmd and run the SQL script to create the table with 3 million rows. This may take a few minutes to run.
+From the **AzureSqlColumnstoreSample** folder, connect to the database using sqlcmd and run the SQL script to create the table with 3 million rows. This may take a few minutes to run.
 
 ```terminal
-sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -i ./CreateSampleTable.sql
+az login
+sqlcmd -S your_server.database.windows.net -G -d your_database -i ./CreateSampleTable.sql
 ```
+
+Leave the terminal window open for the duration of this exercise to avoid having to run 'Az Login' multiple times.
 
 ### Create a Go app that queries this tables and measures the time taken
 
-In the **AzureSqlColumnstoreSample** folder, create a file called [**columnstore.go**](columnstore.go).
+In the **AzureSqlColumnstoreSample** folder, create a copy of this file: [**columnstore.go**](columnstore.go). Make sure to replace the connection information.
 
 Prepare and run your Go app from the **AzureSqlColumnstoreSample** folder in the terminal.
 
@@ -191,12 +199,12 @@ go run columnstore.go
 In the **AzureSqlColumnstoreSample** folder, run this command to create a columnstore index on your table:
 
 ```terminal
-sqlcmd -S your_server.database.windows.net -U your_user -P your_password -d your_database -Q "CREATE CLUSTERED COLUMNSTORE INDEX Columnstoreindex ON Table_with_3M_rows;"
+sqlcmd -S your_server.database.windows.net -G -d your_database -Q "CREATE CLUSTERED COLUMNSTORE INDEX Columnstoreindex ON Table_with_3M_rows;"
 ```
 
 ## Re-run the columnstore.go script and notice how long the query took to complete this time
 
-Run your Go app from the **AzureSqlColumnstoreSample** folder in the terminal.
+Re-run your Go app from the **AzureSqlColumnstoreSample** folder in the same terminal window.
 
 ```terminal
 go run columnstore.go
