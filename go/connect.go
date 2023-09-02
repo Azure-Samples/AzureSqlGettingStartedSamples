@@ -6,13 +6,11 @@ import (
 	"fmt"
 	"log"
 
-	_ "github.com/microsoft/go-mssqldb"
+	"github.com/microsoft/go-mssqldb/azuread"
 )
 
 // Replace with your own connection parameters
 var server = "your_server.database.windows.net"
-var user = "your_user"
-var password = "your_password"
 var database = "your_database"
 
 var db *sql.DB
@@ -20,12 +18,11 @@ var db *sql.DB
 func main() {
 	var err error
 
-	// Create connection string
-	connString := fmt.Sprintf("server=%s;user id=%s;password=%s;database=%s",
-		server, user, password, database)
+        // Build connection string
+        connString := fmt.Sprintf("server=%s;database=%s;fedauth=ActiveDirectoryDefault;", server, database)
 
-	// Create connection pool
-	db, err = sql.Open("sqlserver", connString)
+        // Create connection pool
+        db, err = sql.Open(azuread.DriverName, connString)
 	if err != nil {
 		log.Fatal("Error creating connection pool: " + err.Error())
 	}
