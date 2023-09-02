@@ -5,18 +5,19 @@ import (
 
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
+	"github.com/microsoft/go-mssqldb/azuread"
 )
 
 var server = "your_server.database.windows.net"
-var user = "your_user"
-var password = "your_password"
 var database = "your_database"
 
 // Define a User model struct
 type User struct {
 	gorm.Model
+	ID	  int
 	FirstName string
 	LastName  string
+	Tasks	  []Task 
 }
 
 // Define a Task model struct
@@ -28,6 +29,8 @@ type Task struct {
 	UserID     uint
 }
 
+
+
 // Read and print all the tasks
 func ReadAllTasks(db *gorm.DB) {
 	var users []User
@@ -38,7 +41,7 @@ func ReadAllTasks(db *gorm.DB) {
 		db.Model(&user).Association("Tasks").Find(&tasks)
 		fmt.Printf("%s %s's tasks:\n", user.FirstName, user.LastName)
 		for _, task := range tasks {
-			fmt.Printf("Title: %s\nDueDate: %s\nIsComplete:%t\n\n",
+			fmt.Printf("\tTitle: %s\n\tDueDate: %s\n\tIsComplete:%t\n\n",
 				task.Title, task.DueDate, task.IsComplete)
 		}
 	}
@@ -48,27 +51,21 @@ func ReadAllTasks(db *gorm.DB) {
 func UpdateSomeonesTask(db *gorm.DB, userId int) {
 	var task Task
 	db.Where("user_id = ?", userId).First(&task).Update("Title", "Buy donuts for Luis")
-	fmt.Printf("Title: %s\nDueDate: %s\nIsComplete:%t\n\n",
+	fmt.Printf("\tTitle: %s\n\tDueDate: %s\n\tIsComplete:%t\n\n",
 		task.Title, task.DueDate, task.IsComplete)
 }
 
 // Delete all the tasks for a user
 func DeleteSomeonesTasks(db *gorm.DB, userId int) {
 	db.Where("user_id = ?", userId).Delete(&Task{})
-	fmt.Printf("Deleted all tasks for user %d", userId)
+	fmt.Printf("\nDeleted all tasks for user %d", userId)
 }
 
-func main() {
-	connectionString := fmt.Sprintf("server=%s;user id=%s;password=%s;database=%s",
-		server, user, password, database)
-	db, err := gorm.Open(sqlserver.Open(connectionString), &gorm.Config{})
-
+func main()  {
+	db, err := gorm.Open(sqlserver.New(sqlserver.Config{DriverName:azuread.DriverName, DSN:fmt.Sprintf("sqlserver://%s?database=%s&fedauth=ActiveDirectoryDefault", server, database)}), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
 	}
-
-	//gorm.DefaultCallback.Create().Remove("mssql:set_identity_insert")
-	//defer db.Close()
 
 	fmt.Println("Migrating models...")
 	db.AutoMigrate(&User{})
@@ -82,17 +79,13 @@ func main() {
 
 	// Create appropriate Tasks for each user
 	fmt.Println("Creating new appropriate tasks...")
-	db.Create(&Task{
-		Title: "Do laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 1})
-	db.Create(&Task{
-		Title: "Mow the lawn", DueDate: "2021-03-30", IsComplete: false, UserID: 2})
-	db.Create(&Task{
-		Title: "Do more laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 3})
-	db.Create(&Task{
-		Title: "Watch TV", DueDate: "2021-03-30", IsComplete: false, UserID: 3})
+	db.Create(&Task{Title: "Do laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 1}) 
+	db.Create(&Task{Title: "Mow the lawn", DueDate: "2021-03-30", IsComplete: false, UserID: 2}) 
+	db.Create(&Task{Title: "Do more laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
+	db.Create(&Task{Title: "Watch TV", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
 
 	// Read
-	fmt.Println("\nReading all the tasks...")
+	fmt.Println("\nReading all tasks...")
 	ReadAllTasks(db)
 
 	// Update - update Task title to something more appropriate
@@ -101,4 +94,8 @@ func main() {
 
 	// Delete - delete Luis's task
 	DeleteSomeonesTasks(db, 3)
+
+	// Read
+	fmt.Println("\nReading all tasks...")
+	ReadAllTasks(db)
 }
