@@ -1,20 +1,24 @@
 package main
 
 import (
+	"log"
 	"fmt"
-
+	"database/sql"
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 	"github.com/microsoft/go-mssqldb/azuread"
 )
 
+var sqlDB *sql.DB
+
 var server = "your_server.database.windows.net"
 var database = "your_database"
+var port = 1433
 
 // Define a User model struct
 type User struct {
 	gorm.Model
-	ID	  int
+	ID	  uint `json:"id" sql:"AUTO_INCREMENT" gorm:"primary_key"`
 	FirstName string
 	LastName  string
 	Tasks	  []Task 
@@ -23,6 +27,7 @@ type User struct {
 // Define a Task model struct
 type Task struct {
 	gorm.Model
+	ID	   uint `json:"id" sql:"AUTO_INCREMENT" gorm:"primary_key"`
 	Title      string
 	DueDate    string
 	IsComplete bool
@@ -62,9 +67,22 @@ func DeleteSomeonesTasks(db *gorm.DB, userId int) {
 }
 
 func main()  {
-	db, err := gorm.Open(sqlserver.New(sqlserver.Config{DriverName:azuread.DriverName, DSN:fmt.Sprintf("sqlserver://%s?database=%s&fedauth=ActiveDirectoryDefault", server, database)}), &gorm.Config{})
+
+    	var err error
+
+ 	// Build connection string
+    	connString := fmt.Sprintf("server=%s;port=%d;database=%s;fedauth=ActiveDirectoryDefault;", server, port, database)
+
+    	// Create SQL connection
+        sqlDB, err = sql.Open(azuread.DriverName, connString)
+    	if err != nil {
+        	log.Fatal("Error connecting to database: ", err.Error())
+    	}
+
+	//Use the SQL connection to initialize *gorm.DB 
+	db, err := gorm.Open(sqlserver.New(sqlserver.Config{Conn: sqlDB,}), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect database")
+		log.Fatal("GORM failed to connect database: ", err.Error())
 	}
 
 	fmt.Println("Migrating models...")
@@ -73,16 +91,16 @@ func main()  {
 
 	// Create awesome Users
 	fmt.Println("Creating awesome users...")
-	db.Create(&User{FirstName: "Andrea", LastName: "Lam"})   //UserID: 1
-	db.Create(&User{FirstName: "Meet", LastName: "Bhagdev"}) //UserID: 2
-	db.Create(&User{FirstName: "Luis", LastName: "Bosquez"}) //UserID: 3
+	db.FirstOrCreate(&User{FirstName: "Andrea", LastName: "Lam"},&User{FirstName: "Andrea", LastName: "Lam"})   //UserID: 1
+	db.FirstOrCreate(&User{FirstName: "Meet", LastName: "Bhagdev"},&User{FirstName: "Meet", LastName: "Bhagdev"}) //UserID: 2
+	db.FirstOrCreate(&User{FirstName: "Luis", LastName: "Bosquez"},&User{FirstName: "Luis", LastName: "Bosquez"}) //UserID: 3
 
 	// Create appropriate Tasks for each user
 	fmt.Println("Creating new appropriate tasks...")
-	db.Create(&Task{Title: "Do laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 1}) 
-	db.Create(&Task{Title: "Mow the lawn", DueDate: "2021-03-30", IsComplete: false, UserID: 2}) 
-	db.Create(&Task{Title: "Do more laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
-	db.Create(&Task{Title: "Watch TV", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
+	db.FirstOrCreate(&Task{Title: "Do laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 1},&Task{Title: "Do laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 1}) 
+	db.FirstOrCreate(&Task{Title: "Mow the lawn", DueDate: "2021-03-30", IsComplete: false, UserID: 2},&Task{Title: "Mow the lawn", DueDate: "2021-03-30", IsComplete: false, UserID: 2}) 
+	db.FirstOrCreate(&Task{Title: "Do more laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 3}, &Task{Title: "Do more laundry", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
+	db.FirstOrCreate(&Task{Title: "Watch TV", DueDate: "2021-03-30", IsComplete: false, UserID: 3}, &Task{Title: "Watch TV", DueDate: "2021-03-30", IsComplete: false, UserID: 3}) 
 
 	// Read
 	fmt.Println("\nReading all tasks...")
