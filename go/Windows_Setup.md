@@ -19,9 +19,9 @@ winget update GoLang.Go
 
 The Azure Command-Line Interface (CLI) is a cross-platform command-line tool that can be installed locally on Windows computers. You can use the Azure CLI for Windows to connect to Azure and execute administrative commands on Azure resources. The Azure CLI for Windows can also be used from a browser through the Azure Cloud Shell or run from inside a Docker container.
 
-'''terminal
+```terminal
 winget install -e --id Microsoft.AzureCLI
-'''
+```
 
 ## Install the SQL Command Line Utility for SQL Server
 
